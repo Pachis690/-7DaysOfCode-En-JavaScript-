@@ -15,41 +15,74 @@ una a la vez. Entonces, mientras continúe respondiendo **ok** a la pregunta:
 Y, justo después, presenta un mensaje comentando algo sobre la tecnología ingresada.
 */
 
-let frondEnd = 0
-let backEnd = 0
-let eleccion = 0
-let frameworks = 0
+let frontEnd = 0;
+let backEnd = 0;
+let eleccion = 0;
+let frameworks = 0;
 
-alert("Hola!")
-alert("Listo para otro juego?")
-alert("Elige las opciones que más te gusten y sigue la historia!")
-alert("Empezemos!")
+alert("Hola!");
+alert("Listo para otro juego?");
+alert("Elige las opciones que más te gusten y sigue la historia!");
+alert("Empezemos!");
 
-eleccion = prompt("Quieres seguir hacia el área de Front-End [1] o seguir hacia el área de Back-End [2] ?")
+eleccion = prompt("Quieres seguir hacia el área de Front-End [1] o seguir hacia el área de Back-End [2] ?");
 
-if(eleccion == 1){
-    alert("Elejiste Front End!")
-    frameworks = prompt("Quiere aprender React[1] o aprender Vue[2]?")
-    if( frameworks == 1){
-        alert("Elejiste React!")
+if (eleccion == 1) {
+    frontEnd = 1;
+    console.log(frontEnd);
+} else if (eleccion == 2) {
+    backEnd = 1;
+    console.log(backEnd);
+} else {
+    alert("Ingrese un número válido!!! >:|");
+}
+
+if (eleccion == 1) {
+    alert("Elegiste Front End!");
+    frameworks = prompt("¿Quieres aprender React[1] o aprender Vue[2]?");
+    if (frameworks == 1) {
+        alert("Elegiste React!");
+    } else if (frameworks == 2) {
+        alert("Elegiste Vue!");
+    } else {
+        alert("Número no admitido!! Ingrese un número válido!!!");
     }
-    else if(frameworks == 2){
-        alert(" Alejiste Vue!")
-    }
-    else{
-        alert("Numero no admitido!! ingrese un numero valido!!!")
+} else if (eleccion == 2) {
+    alert("Elegiste Back End!");
+    frameworks = prompt("¿Quieres aprender C#[1] o Java[2]?");
+    if (frameworks == 1) {
+        alert("Elegiste C#!");
+    } else if (frameworks == 2) {
+        alert("Elegiste Java!!!");
+    } else {
+        alert("Número no admitido!! Ingrese un número válido!!!");
     }
 }
-else{
-    alert("Elejiste Back End!")
-    frameworks = prompt("Quiere aprender  C#[1] o Java[2]")
-    if(frameworks == 1){
-        alert("Elejiste C#!")
+
+alert("Buenas respuestas!");
+
+if (frontEnd > backEnd) {
+    let especializacion = prompt("Prefieres seguir especializándote en FrontEnd [1] o desarrollarte para convertirte en Fullstack [2]?");
+    if (especializacion == 1) {
+        alert("¡Genial! Sigue profundizando en FrontEnd.");
+    } else if (especializacion == 2) {
+        alert("¡Excelente! Convertirse en Fullstack abre muchas oportunidades.");
+    } else {
+        alert("Opción no válida, pero sigue aprendiendo!");
     }
-    else if (frameworks == 2){
-        alert("Elejiste Java!!!")
-    }
-    else{
-        alert("Numero no admitido!! ingrese un numero valido!!!")
+} else if (backEnd > frontEnd) {
+    let especializacion = prompt("Prefieres seguir especializándote en BackEnd [1] o desarrollarte para convertirte en Fullstack [2]?");
+    if (especializacion == 1) {
+        alert("¡Genial! Sigue profundizando en BackEnd.");
+    } else if (especializacion == 2) {
+        alert("¡Excelente! Convertirse en Fullstack abre muchas oportunidades.");
+    } else {
+        alert("Opción no válida, pero sigue aprendiendo!");
     }
 }
+
+// Bucle para preguntar por más tecnologías
+do {
+    let tecnologia = prompt("¿Hay alguna otra tecnología que te gustaría aprender?");
+    alert("¡Genial elección! Aprender " + tecnologia + " puede ser muy útil.");
+} while (confirm("¿Quieres agregar otra tecnología?") === true);
