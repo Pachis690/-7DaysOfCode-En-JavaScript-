@@ -37,7 +37,15 @@ Esta fue la tarea que nos asignaron en el dia 5! es muy interesante el tema de a
 En este día tenemos que añadir (modificar toda la estructura en mi caso jaja) funciones al programam del día anterior! como eliminar, imprimir los elementos de los array's
 fue muy interesante este tema
 
-- ## Día 6!
+- ## Día 7!
+Desgraciadamente este es el ultimo dia...
+
+Y como el ejercicio anterior tenemos que modificar el codigo (reescribiendo todo otra vez jaja) para añadir un cuadro de busqueda para localizar los elementos del array en especifico 
+en mi caso fueron: frutas, lacteos y dulces, y el usuario tiene que especificar la categoria para despues localizar si se encuentra el producto para eliminarlo, sino saltaria un mensaje de error
+
+
+
+  
 
 
 
